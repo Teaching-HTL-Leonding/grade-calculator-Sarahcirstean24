@@ -28,6 +28,16 @@ if (grade == "yes")
     possiblePoints += 20;
 }
 
+Console.WriteLine("Have you done an oral exam yes/no ?");
+grade = Console.ReadLine()!;
+
+
+if (grade == "yes")
+{
+    Console.WriteLine("How many points did you get for your oral exam (0-20)? ");
+    points += int.Parse(Console.ReadLine()!);
+    possiblePoints += 20;
+
 int note = 0;
 
 double percentage = (points / possiblePoints * 100);
@@ -47,10 +57,15 @@ else if (percentage < 89)
 {
     note = 2;
 }
-else if (percentage >= 89)
+if (percentage >= 89)
 {
     note = 1;
 }
+
 {
-Console.WriteLine("du bekommst die Note" + note);
+    Console.WriteLine("du bekommst die Note" + note);}
 }
+
+
+
+

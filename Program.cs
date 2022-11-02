@@ -24,7 +24,7 @@ if (grade == "yes")
 
 {
     Console.WriteLine("How many points did you get because of homework (0-20)? ");
-    points += int.Parse(Console.ReadLine()!);
+    double pointshomework = double.Parse(Console.ReadLine()!);
     possiblePoints += 20;
 }
 
@@ -36,36 +36,61 @@ if (grade == "yes")
 {
     Console.WriteLine("How many points did you get for your oral exam (0-20)? ");
     points += int.Parse(Console.ReadLine()!);
-    possiblePoints += 20;
+    possiblePoints += 20;}
+   
+    double percentage = points/ possiblePoints * 100;
+    double percentage2 = (points + 20)/possiblePoints * 100;
 
-int note = 0;
-
-double percentage = (points / possiblePoints * 100);
 if (percentage < 50)
 {
-    note = 5;
+    Console.WriteLine("5");
 }
-else if (percentage < 63)
+
+ else if (percentage < 63)
 {
-    note = 4;
+    Console.WriteLine("4");
 }
+
 else if (percentage < 76)
 {
-    note = 3;
+    Console.WriteLine("3");
 }
+
 else if (percentage < 89)
 {
-    note = 2;
-}
-if (percentage >= 89)
-{
-    note = 1;
+    Console.WriteLine("2");
 }
 
+else if (percentage2 >= 89)
 {
-    Console.WriteLine("du bekommst die Note" + note);}
+   Console.WriteLine("1");
+}
+if (percentage2 < 50)
+{
+    Console.WriteLine("your grade is 5");
 }
 
+ else if (percentage2 < 63)
+{
+    Console.WriteLine("your grade is 4");
+}
+
+else if (percentage2 < 76)
+{
+    Console.WriteLine("your grade is 3");
+}
+
+else if (percentage2 < 89)
+{
+    Console.WriteLine("your grade is 2");
+}
+
+else if (percentage2 >= 89)
+{
+   Console.WriteLine("your grade 1");
+}
+if (percentage2 > percentage)
+{Console.WriteLine("If you would get all the points for homework (percentage2), then you would get a better grade. ");}
 
 
 
